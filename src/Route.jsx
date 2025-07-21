@@ -13,11 +13,11 @@ const routes = [
       element: <SellerProfile />
     },
     {
-      path : "/seller-products/:id",
+      path : "/seller-product",
       element: <SellerProductPage />
     },
     { 
-      path : "/seller-config",
+      path : "/",
       element: <SellerConfig />
      }
 ]

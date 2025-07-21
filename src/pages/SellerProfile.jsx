@@ -1,7 +1,10 @@
-
+import SellerNavbar from "../components/SellerNavbar";
 function SellerProfile() {
   return (
     <div className="seller-profile">
+      <header>
+        <SellerNavbar />
+      </header>
       <h1>Seller Profile</h1>
       <p>Welcome to your profile page!</p>
       <p>Here you can manage your products and view your sales.</p>
