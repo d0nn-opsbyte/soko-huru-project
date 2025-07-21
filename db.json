@@ -3,6 +3,7 @@
   {
     "Id": 1,
     "Sellername": "FreshMart",
+    "Password": "fresh123",
     "Product": [
       {
         "id": 101,
@@ -25,6 +26,7 @@
   {
     "Id": 2,
     "Sellername": "TechZone",
+    "Password": "techzone2023",
     "Product": [
       {
         "id": 201,
@@ -47,6 +49,7 @@
   {
     "Id": 3,
     "Sellername": "GreenGrocer",
+    "Password": "greengrocer2023",
     "Product": [
       {
         "id": 301,
