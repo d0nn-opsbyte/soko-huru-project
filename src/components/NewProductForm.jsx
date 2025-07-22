@@ -1,5 +1,4 @@
-import SellerNavbar from "../components/SellerNavbar";
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 
 function NewProductForm({sellerProducts, setSellerProducts, sellerId}) {
     const[formData, setFormData] = useState({
