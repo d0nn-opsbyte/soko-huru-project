@@ -30,3 +30,35 @@ const HomePage = () => {
         </div>
     );
 };
+
+const styles = {
+    container: {
+        textAlign: "center",
+        padding: "20px",
+        fontFamily: "Arial, sans-serif",
+    },
+    buttonContainer: {
+        margin: '20px',
+    },
+    button: {
+        margin: '10px',
+        padding: '15px 30px',
+        fontSize: '16px',
+        cursor: 'pointer',
+        borderRadius: '8px',
+        border: 'none',
+        backgroundColor: '#007bff',
+        color: 'white',
+    },
+    infoSection: {
+        marginTop: '40px',
+        padding: '20px',
+        backgroundColor: '#f8f8f8',
+        borderRadius: '10px',
+        maxWidth: '600px',
+        marginLeft: 'auto',
+        marginRight: 'auto'
+    }
+};
+
+export default Homepage;
