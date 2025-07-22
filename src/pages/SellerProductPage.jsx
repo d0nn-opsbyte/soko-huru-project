@@ -41,7 +41,7 @@ function SellerProductPage() {
           <div style={{display:"flex", flexWrap:"wrap", alignItems:"center", justifyContent:"space-around", gap:"100px"}}>
               {sellerProducts.length > 0 ? (
                 sellerProducts.map(product => (
-                   <SellerItem key={product.productId} product={product} />
+                   <SellerItem key={product.productId} product={product} sellerProducts={sellerProducts} sellerId={sellerId} setSellerProducts={setSellerProducts}/>
                  ))
                  ) : (
                <h1>No products available.</h1>

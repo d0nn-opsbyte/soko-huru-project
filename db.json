@@ -18,13 +18,6 @@
           "price": 180,
           "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbqEzx2H4WSFUqeFAwjgeXfMYQMDKIVljjeA&s",
           "description": "Baked daily with 100% wholegrain flour, going for Ksh 180 per loaf."
-        },
-        {
-          "productId": 234657,
-          "name": "Kenyan grown Cabbages",
-          "price": 70,
-          "image": "https://assets.clevelandclinic.org/transform/871f96ae-a852-4801-8675-683191ce372d/Benefits-Of-Cabbage-589153824-770x533-1_jpg",
-          "description": "Healthy home grown cabbages at 70sh a piece"
         }
       ],
       "Contact": "0722334455",
