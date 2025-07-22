@@ -1,100 +1,106 @@
- {
-        "Sellers" : [
-  {
-    "Id": 1,
-    "Sellername": "FreshMart",
-    "Password": "fresh123",
-    "Product": [
-      {
-        "id": 101,
-        "name": "Organic Apples",
-        "price": 250,
-        "image": "https://example.com/images/apples.jpg",
-        "description": "Fresh organic apples from local farms."
-      },
-      {
-        "id": 102,
-        "name": "Wholegrain Bread",
-        "price": 180,
-        "image": "https://example.com/images/bread.jpg",
-        "description": "Baked daily with 100% wholegrain flour."
-      }
-    ],
-    "Contact": "0722334455",
-    "Address": "Westlands, Nairobi"
-  },
-  {
-    "Id": 2,
-    "Sellername": "TechZone",
-    "Password": "techzone2023",
-    "Product": [
-      {
-        "id": 201,
-        "name": "Wireless Earbuds",
-        "price": 4500,
-        "image": "https://example.com/images/earbuds.jpg",
-        "description": "Bluetooth earbuds with noise cancellation."
-      },
-      {
-        "id": 202,
-        "name": "Smartwatch Pro",
-        "price": 8200,
-        "image": "https://example.com/images/smartwatch.jpg",
-        "description": "Tracks fitness, heart rate, and more."
-      }
-    ],
-    "Contact": "0799887766",
-    "Address": "Moi Avenue, Nairobi"
-  },
-  {
-    "Id": 3,
-    "Sellername": "GreenGrocer",
-    "Password": "greengrocer2023",
-    "Product": [
-      {
-        "id": 301,
-        "name": "Fresh Kale Bunch",
-        "price": 50,
-        "image": "https://example.com/images/kale.jpg",
-        "description": "Locally grown, pesticide-free kale."
-      },
-      {
-        "id": 302,
-        "name": "Carrots (1kg)",
-        "price": 80,
-        "image": "https://example.com/images/carrots.jpg",
-        "description": "Crunchy and sweet carrots straight from the farm."
-      }
-    ],
-    "Contact": "0744332211",
-    "Address": "Kariokor Market, Nairobi"
-  }
-],
-
-"Buyers": [
-  {
-    "Id": 1,
-    "Username": "john_doe",
-    "Password": "password123",
-    "Contact": "0711234567",
-    "Address": "Nairobi",
-    "Photo": "https://example.com/photos/john.jpg"
-  },
-  {
-    "Id": 2,
-    "Username": "jane_kenya",
-    "Password": "securepass456",
-    "Contact": "0700123456",
-    "Address": "Thika",
-    "Photo": "https://example.com/photos/jane.jpg"
-  },
-  {
-    "Id": 3,
-    "Username": "kevin_m",
-    "Password": "mypassword789",
-    "Contact": "0733445566",
-    "Address": "Machakos",
-    "Photo": "https://example.com/photos/kevin.jpg"
-  }
-]
+{
+  "Sellers": [
+    {
+      "id": "1",
+      "Sellername": "FreshMart",
+      "Password": "fresh123",
+      "Products": [
+        {
+          "productId": 101,
+          "name": "Organic Apples",
+          "price": 250,
+          "image": "https://www.orgpick.com/cdn/shop/articles/Apple_1024x1024.jpg?v=1547124407",
+          "description": "Fresh organic apples from local farms, going for Ksh 250 per kg."
+        },
+        {
+          "productId": 102,
+          "name": "Wholegrain Bread",
+          "price": 180,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbqEzx2H4WSFUqeFAwjgeXfMYQMDKIVljjeA&s",
+          "description": "Baked daily with 100% wholegrain flour, going for Ksh 180 per loaf."
+        },
+        {
+          "productId": 234657,
+          "name": "Kenyan grown Cabbages",
+          "price": 70,
+          "image": "https://assets.clevelandclinic.org/transform/871f96ae-a852-4801-8675-683191ce372d/Benefits-Of-Cabbage-589153824-770x533-1_jpg",
+          "description": "Healthy home grown cabbages at 70sh a piece"
+        }
+      ],
+      "Contact": "0722334455",
+      "Address": "Westlands, Nairobi"
+    },
+    {
+      "id": "2",
+      "Sellername": "TechZone",
+      "Password": "techzone2023",
+      "Products": [
+        {
+          "productId": 201,
+          "name": "Wireless Earbuds",
+          "price": 4500,
+          "image": "https://example.com/images/earbuds.jpg",
+          "description": "Bluetooth earbuds with noise cancellation."
+        },
+        {
+          "productId": 202,
+          "name": "Smartwatch Pro",
+          "price": 8200,
+          "image": "https://example.com/images/smartwatch.jpg",
+          "description": "Tracks fitness, heart rate, and more."
+        }
+      ],
+      "Contact": "0799887766",
+      "Address": "Moi Avenue, Nairobi"
+    },
+    {
+      "id": "3",
+      "Sellername": "GreenGrocer",
+      "Password": "greengrocer2023",
+      "Products": [
+        {
+          "productId": 301,
+          "name": "Fresh Kale Bunch",
+          "price": 50,
+          "image": "https://example.com/images/kale.jpg",
+          "description": "Locally grown, pesticide-free kale."
+        },
+        {
+          "productId": 302,
+          "name": "Carrots (1kg)",
+          "price": 80,
+          "image": "https://example.com/images/carrots.jpg",
+          "description": "Crunchy and sweet carrots straight from the farm."
+        }
+      ],
+      "Contact": "0744332211",
+      "Address": "Kariokor Market, Nairobi"
     }
+  ],
+  "Buyers": [
+    {
+      "id": "1",
+      "Username": "john_doe",
+      "Password": "password123",
+      "Contact": "0711234567",
+      "Address": "Nairobi",
+      "Photo": "https://example.com/photos/john.jpg"
+    },
+    {
+      "id": "2",
+      "Username": "jane_kenya",
+      "Password": "securepass456",
+      "Contact": "0700123456",
+      "Address": "Thika",
+      "Photo": "https://example.com/photos/jane.jpg"
+    },
+    {
+      "id": "3",
+      "Username": "kevin_m",
+      "Password": "mypassword789",
+      "Contact": "0733445566",
+      "Address": "Machakos",
+      "Photo": "https://example.com/photos/kevin.jpg"
+    }
+  ]
+}
