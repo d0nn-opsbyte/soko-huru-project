@@ -25,21 +25,21 @@
     },
     {
       "id": "2",
-      "Sellername": "Techy",
+      "Sellername": "TechZone",
       "Password": "techzone2023",
       "Products": [
         {
           "productId": 201,
           "name": "Wireless Earbuds",
           "price": 4500,
-          "image": "https://example.com/images/earbuds.jpg",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSaF04MyvlzTMW-7YYzE8vKk2nBkjE_hXKTQ&s",
           "description": "Bluetooth earbuds with noise cancellation."
         },
         {
           "productId": 202,
           "name": "Smartwatch Pro",
           "price": 8200,
-          "image": "https://example.com/images/smartwatch.jpg",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtrypqkM6xtfRVXc8ScnhmJa03jtrGHmZVlA&s",
           "description": "Tracks fitness, heart rate, and more."
         }
       ],
@@ -55,35 +55,19 @@
           "productId": 301,
           "name": "Fresh Kale Bunch",
           "price": 50,
-          "image": "https://example.com/images/kale.jpg",
+          "image": "https://greenspoon.co.ke/wp-content/uploads/2021/09/3J2A8889.jpg",
           "description": "Locally grown, pesticide-free kale."
         },
         {
           "productId": 302,
           "name": "Carrots (1kg)",
           "price": 80,
-          "image": "https://example.com/images/carrots.jpg",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJAh7o-NAkU5fAD71hx3jcq7I4Hk6_DLjXTA&s",
           "description": "Crunchy and sweet carrots straight from the farm."
         }
       ],
       "Contact": "0744332211",
       "Address": "Kariokor Market, Nairobi"
-    },
-    {
-      "id": "48c4",
-      "Sellername": "QuickMart",
-      "Password": "quick123",
-      "Products": [
-        {
-          "productId": 234678,
-          "name": "Juice",
-          "price": 200,
-          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXaYzA-Ld5I99hCMQ7nfph7HjJuL2xkb5tRw&s",
-          "description": "Best tropical juices in town for only 250sh per glass. Pure concentrate of fruit"
-        }
-      ],
-      "Contact": "0793456789",
-      "Address": "Westlands, Nairobi"
     }
   ],
   "Buyers": [

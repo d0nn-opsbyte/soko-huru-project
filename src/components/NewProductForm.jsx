@@ -56,7 +56,7 @@ function NewProductForm({sellerProducts, setSellerProducts, sellerId}) {
     return (
         <>
         <hr />
-         <h2 style={{textAlign:"center"}}>Add a New Product</h2><hr/>
+         <h2 style={{textAlign:"center", color:"#007bff"}}>Add a New Product</h2><hr/>
          <form  onSubmit={handleSubmit} style={{display:"flex", justifyContent:"center", gap:"20px", flexWrap:"wrap", width:"250px", border:"1px solid black", padding:"30px", borderRadius:"10px", textAlign:"center", margin:"auto"}}>
 
               <label htmlFor="productId" style={{display:"block", textAlign:"center"}}><strong>Special Id:</strong></label>
