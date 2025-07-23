@@ -16,8 +16,10 @@ function Products() {
   }, []);
 
   console.log(sellers)
+
+
   return (
-  <>
+  <div>
     {!buyer ? (
       <Login setBuyer={setBuyer} />
     ) : ( 
@@ -31,7 +33,7 @@ function Products() {
       </>
     )}
   
-  </>
+  </div>
 );
 
 }
