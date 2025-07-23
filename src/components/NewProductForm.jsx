@@ -60,21 +60,22 @@ function NewProductForm({sellerProducts, setSellerProducts, sellerId}) {
          <form  onSubmit={handleSubmit} style={{display:"flex", justifyContent:"center", gap:"20px", flexWrap:"wrap", width:"250px", border:"1px solid black", padding:"30px", borderRadius:"10px", textAlign:"center", margin:"auto"}}>
 
               <label htmlFor="productId" style={{display:"block", textAlign:"center"}}><strong>Special Id:</strong></label>
-              <input onChange={handleChange} value={formData.productId} name="productId" id="productId" type="number" placeholder='six digits: e.g 123456' style={{width:"200px", padding:"5px", textAlign:"center" ,marginTop:"0px", border:"1px solid red", borderRadius:"15px"}} required/>
+              <input onChange={handleChange} value={formData.productId} name="productId" id="productId" type="number" placeholder='six digits: e.g 123456' style={{width:"200px", padding:"5px", textAlign:"center" ,marginTop:"0px", border:"1px solid #007bff", borderRadius:"15px"}} required/>
 
               <label htmlFor="name" style={{display:"block", textAlign:"center"}}><strong>Product Name:</strong></label>
-              <input  onChange={handleChange} value={formData.name} name="name" id="name" type="text" placeholder='Enter product name' required></input>
+              <input  onChange={handleChange} value={formData.name} name="name" id="name" type="text" placeholder='Enter product name' required
+               style={{width:"200px", padding:"5px", textAlign:"center" ,marginTop:"0px", border:"1px solid #007bff", borderRadius:"15px"}}></input>
 
               <label htmlFor="price" style={{display:"block", textAlign:"center"}}><strong>Product Price:</strong></label>
-              <input  onChange={handleChange} value={formData.price} name="price" id="price" type="number" placeholder='50000' required/>
+              <input  style={{width:"200px", padding:"5px", textAlign:"center" ,marginTop:"0px", border:"1px solid #007bff", borderRadius:"15px"}}  onChange={handleChange} value={formData.price} name="price" id="price" type="number" placeholder='50000' required/>
 
               <label htmlFor='image' style={{display:"block", textAlign:"center"}}><strong>Product Image:</strong></label>
-              <input  onChange={handleChange} value={formData.image} name="image" id="image" type="url" placeholder="image URL" required/>
+              <input  style={{width:"200px", padding:"5px", textAlign:"center" ,marginTop:"0px", border:"1px solid #007bff", borderRadius:"15px"}} onChange={handleChange} value={formData.image} name="image" id="image" type="url" placeholder="image URL" required/>
 
               <label htmlFor="description" style={{display:"block", textAlign:"center"}}><strong>Description:</strong></label>
-              <input  onChange={handleChange} value={formData.description} name="description" id="description" placeholder='Enter product description' required/>
+              <input  style={{width:"200px", padding:"5px", textAlign:"center" ,marginTop:"0px", border:"1px solid #007bff", borderRadius:"15px"}} onChange={handleChange} value={formData.description} name="description" id="description" placeholder='Enter product description' required/>
 
-              <button type="submit" style={{backgroundColor:"rgba(218, 21, 14, 0.78)", color:"white", padding:"10px", borderRadius:"5px", border:"none", cursor:"pointer", margin:"20px"}}>Add Product</button>
+              <button type="submit" style={{backgroundColor:"#007bff", color:"white", padding:"10px", borderRadius:"5px", border:"none", cursor:"pointer", margin:"20px"}}>Add Product</button>
           </form>
         </>
     )

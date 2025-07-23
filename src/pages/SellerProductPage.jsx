@@ -3,6 +3,7 @@ import SellerNavbar from '../components/SellerNavbar';
 import SellerItem from '../components/SellerItem';
 import NewProductForm from '../components/NewProductForm';
 import LoginForm from '../components/LoginForm';
+import SellerProfile from '../components/SellerProfile';
 
 function SellerProductPage() {
   const [sellerProducts, setSellerProducts] = useState([]);
@@ -21,6 +22,12 @@ function SellerProductPage() {
     .catch(error => console.error('Error fetching seller products:', error));
   },[sellerId])
 
+  useEffect(() => {
+  const savedSeller = localStorage.getItem('seller');
+  if (savedSeller) {
+    setSeller(JSON.parse(savedSeller));
+  }
+}, []);
 
   return (
     <>
@@ -28,7 +35,7 @@ function SellerProductPage() {
       <LoginForm setSeller={setSeller}/>):(
     <>
        <header>
-        <SellerNavbar />
+        <SellerNavbar setSeller={setSeller} />
       </header><hr/>
       <div style={{display:"flex", flexDirection:"column", alignItems:"center", padding:"20px"}}>
           <h2>Welcome to {seller.Sellername} Productpage</h2><hr />
@@ -44,11 +51,12 @@ function SellerProductPage() {
                    <SellerItem key={product.productId} product={product} sellerProducts={sellerProducts} sellerId={sellerId} setSellerProducts={setSellerProducts}/>
                  ))
                  ) : (
-               <h1>No products available.</h1>
+               <h2>No products available, add new products.</h2>
                  )}  
           </div>
       </div>
       <NewProductForm sellerId={sellerId} sellerProducts={sellerProducts} setSellerProducts={setSellerProducts}/>
+      <SellerProfile Id={sellerId}/>
    </>)
    };
    </>

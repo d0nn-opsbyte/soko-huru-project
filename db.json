@@ -3,7 +3,7 @@
     {
       "id": "1",
       "Sellername": "FreshMart",
-      "Password": "fresh123",
+      "Password": "fresh234",
       "Products": [
         {
           "productId": 101,
@@ -25,7 +25,7 @@
     },
     {
       "id": "2",
-      "Sellername": "TechZone",
+      "Sellername": "Techy",
       "Password": "techzone2023",
       "Products": [
         {
@@ -68,6 +68,22 @@
       ],
       "Contact": "0744332211",
       "Address": "Kariokor Market, Nairobi"
+    },
+    {
+      "id": "48c4",
+      "Sellername": "QuickMart",
+      "Password": "quick123",
+      "Products": [
+        {
+          "productId": 234678,
+          "name": "Juice",
+          "price": 200,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXaYzA-Ld5I99hCMQ7nfph7HjJuL2xkb5tRw&s",
+          "description": "Best tropical juices in town for only 250sh per glass. Pure concentrate of fruit"
+        }
+      ],
+      "Contact": "0793456789",
+      "Address": "Westlands, Nairobi"
     }
   ],
   "Buyers": [
