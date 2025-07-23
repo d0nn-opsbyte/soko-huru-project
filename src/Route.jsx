@@ -1,6 +1,5 @@
 import LogOutPage from "./pages/LogOutPage";
 import SellerProductPage from "./pages/SellerProductPage";
-import SellerConfig from "./pages/SellerConfig";
 import SellerProfile from "./pages/SellerProfile";
 
 const routes = [
@@ -13,12 +12,8 @@ const routes = [
       element: <SellerProfile />
     },
     {
-      path : "/seller-product",
-      element: <SellerProductPage />
-    },
-    { 
       path : "/",
-      element: <SellerConfig />
-     }
+      element: <SellerProductPage />
+    }
 ]
 export default routes;

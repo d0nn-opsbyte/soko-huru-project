@@ -2,18 +2,18 @@ import React, {useState, useEffect} from 'react';
 import SellerNavbar from '../components/SellerNavbar';
 import SellerItem from '../components/SellerItem';
 import NewProductForm from '../components/NewProductForm';
+import LoginForm from '../components/LoginForm';
 
 function SellerProductPage() {
   const [sellerProducts, setSellerProducts] = useState([]);
-   const[seller, setSeller] = useState([]);
+   const[seller, setSeller] = useState('');
   const baseURL = 'http://localhost:3000/Sellers';
-  const sellerId = 1; 
+  const sellerId = seller.id
   
   useEffect(()=>{
     fetch(`${baseURL}/${sellerId}`)
     .then(response => response.json())
     .then(data => {
-      setSeller(data)
       setSellerProducts(data.Products || []);
       console.log('seller Data', data);
       console.log('Seller Products:', data.Products);
@@ -21,11 +21,11 @@ function SellerProductPage() {
     .catch(error => console.error('Error fetching seller products:', error));
   },[sellerId])
 
- if (!seller || !sellerProducts) {
-    return <h1>Loading...</h1>;
-  }
 
   return (
+    <>
+    {!seller?(
+      <LoginForm setSeller={setSeller}/>):(
     <>
        <header>
         <SellerNavbar />
@@ -49,9 +49,11 @@ function SellerProductPage() {
           </div>
       </div>
       <NewProductForm sellerId={sellerId} sellerProducts={sellerProducts} setSellerProducts={setSellerProducts}/>
+   </>)
+   };
    </>
-   );
-  }
+  )
+}
       
 
 export default SellerProductPage;
