@@ -7,13 +7,13 @@ function SignUp ({ onSignUp}) {
       const [address, setAddress] = useState("");
       const [photo, setPhoto] = useState("");
 
-   function handleSubmit (e) {
+   function handleSignup (e) {
     e.preventDefault();
 
-    const newUser = {username, password, contact, address, photo};
+    const newBuyer = {username, password, contact, address, photo};
 
 
-    fetch("http://localhost:4000/buyers", {
+    fetch("http://localhost:3000/buyers", {
     method: "POST",
     headers: {"Content-Type": "application/json"},
     body: JSON.stringify(newUser)
@@ -22,17 +22,11 @@ function SignUp ({ onSignUp}) {
      .then(data => {
         onSignUp(data);
         alert("sign up successful");
-
-        setUsername("")
-        setContact("")
-        setAddress("")
-        setPhoto("")
-        setPassword("");
      });
    }
   
    return(
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSignup}>
         <h2>buyer sign up</h2>
         <input placeholder="Username" 
         value={username} 

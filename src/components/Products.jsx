@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import SellerItem from "./SellerItem";
+import Login from "./Login";
 
 function Products() {
   const [sellers, setSellers] = useState([]);
+  const[buyer,setBuyer]=useState(null)
 
   useEffect(() => {
     fetch("http://localhost:3000/Sellers")
@@ -14,12 +16,23 @@ function Products() {
 
   console.log(sellers)
   return (
-    <>
+  <>
+    {!buyer ? (
+      <Login setBuyer={setBuyer} />
+    ) : ( 
+     <>
+      <h2>Welcome {buyer.Username}</h2>
+      <img src={buyer.Photo}/>
       {sellers.map((seller) => (
         <SellerItem key={seller.id} seller={seller} />
       ))}
-    </>
-  )
+      <button onClick={() => setBuyer(null)}>Logout</button>
+      </>
+    )}
+  
+  </>
+);
+
 }
 
 export default Products;

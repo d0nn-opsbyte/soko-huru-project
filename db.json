@@ -72,31 +72,28 @@
   ],
   "Buyers": [
     {
-      "Id": 1,
-      "Username": "john_doe",
+      "id": 1,
+      "Username": "john doe",
       "Password": "password123",
       "Contact": "0711234567",
       "Address": "Nairobi",
-      "Photo": "https://example.com/photos/john.jpg",
-      "id": "1380"
+      "Photo": "https://example.com/photos/john.jpg"
     },
     {
-      "Id": 2,
+      "id": 2,
       "Username": "jane_kenya",
       "Password": "securepass456",
       "Contact": "0700123456",
       "Address": "Thika",
-      "Photo": "https://example.com/photos/jane.jpg",
-      "id": "780c"
+      "Photo": "https://example.com/photos/jane.jpg"
     },
     {
-      "Id": 3,
+      "id": 3,
       "Username": "kevin_m",
       "Password": "mypassword789",
       "Contact": "0733445566",
       "Address": "Machakos",
-      "Photo": "https://example.com/photos/kevin.jpg",
-      "id": "c925"
+      "Photo": "https://example.com/photos/kevin.jpg"
     }
   ]
 }

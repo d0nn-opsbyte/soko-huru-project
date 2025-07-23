@@ -1,24 +1,23 @@
 import React, {useState} from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-function Login ({ onLogin }) {
-      const [username, setUsername] = useState("");
-      const [password, setPassword] = useState("");
+
+function Login ({ setBuyer }) {
+      const [Username, setUsername] = useState("");
+      const [Password, setPassword] = useState("");
+      const navigate =useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
 
-     fetch("http://localhost:4000/Buyers", {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify(newUser)
-     })
+     fetch("http://localhost:3000/Buyers")
      .then((res) => res.json())
      .then(buyers => {
         const found =buyers.find(
-            b => b.username === username && b.password === password
+            b => b.Username === Username && b.Password === Password
         );
         if (found) {
-            onLogin(found);
+            setBuyer(found);
             alert("Login successful");
 
             setUsername("");
@@ -28,19 +27,26 @@ function Login ({ onLogin }) {
         }   
      });
    }
+   
   
    return(
+   <div>
     <form onSubmit={handleSubmit}>
         <h2>buyer Login</h2>
         <input placeholder="Username" 
-        value={username} 
+        value={Username} 
         onChange={(e) => setUsername(e.target.value)}/><br/>
         <input type="password"
         placeholder="Enter Password"
-        value={password}
+        value={Password}
         onChange={(e) => setPassword(e.target.value)} /><br/>
         <button type="submit">Login</button>
     </form>
+
+    <p>
+        No account?<Link to="/signup">Sign up here</Link>
+    </p>
+    </div>
    );
   }    
 
