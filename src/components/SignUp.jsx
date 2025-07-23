@@ -13,7 +13,7 @@ function SignUp ({ onSignUp}) {
     const newUser = {username, password, contact, address, photo};
 
 
-    fetch("http://localhost:4000/Buyers", {
+    fetch("http://localhost:4000/buyers", {
     method: "POST",
     headers: {"Content-Type": "application/json"},
     body: JSON.stringify(newUser)

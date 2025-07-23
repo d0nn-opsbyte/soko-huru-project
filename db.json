@@ -1,18 +1,19 @@
 {
   "Sellers": [
     {
-      "Id": 1,
+      "id": 1,
       "Sellername": "FreshMart",
-      "Product": [
+      "Password" : "fresh123",
+      "Products": [
         {
-          "id": 101,
+          "productId": 101,
           "name": "Organic Apples",
           "price": 250,
           "image": "https://example.com/images/apples.jpg",
           "description": "Fresh organic apples from local farms."
         },
         {
-          "id": 102,
+          "productId": 102,
           "name": "Wholegrain Bread",
           "price": 180,
           "image": "https://example.com/images/bread.jpg",
@@ -20,22 +21,22 @@
         }
       ],
       "Contact": "0722334455",
-      "Address": "Westlands, Nairobi",
-      "id": "912f"
+      "Address": "Westlands, Nairobi"
     },
     {
-      "Id": 2,
+      "id": 2,
       "Sellername": "TechZone",
-      "Product": [
+      "Password" : "techzone123",
+      "Products": [
         {
-          "id": 201,
+          "productId": 201,
           "name": "Wireless Earbuds",
           "price": 4500,
           "image": "https://example.com/images/earbuds.jpg",
           "description": "Bluetooth earbuds with noise cancellation."
         },
         {
-          "id": 202,
+          "productId": 202,
           "name": "Smartwatch Pro",
           "price": 8200,
           "image": "https://example.com/images/smartwatch.jpg",
@@ -43,22 +44,22 @@
         }
       ],
       "Contact": "0799887766",
-      "Address": "Moi Avenue, Nairobi",
-      "id": "4c2d"
+      "Address": "Moi Avenue, Nairobi"
     },
     {
-      "Id": 3,
+      "id": 3,
       "Sellername": "GreenGrocer",
-      "Product": [
+      "Password" : "grocer123",
+      "Products": [
         {
-          "id": 301,
+          "productId": 301,
           "name": "Fresh Kale Bunch",
           "price": 50,
           "image": "https://example.com/images/kale.jpg",
           "description": "Locally grown, pesticide-free kale."
         },
         {
-          "id": 302,
+          "productId": 302,
           "name": "Carrots (1kg)",
           "price": 80,
           "image": "https://example.com/images/carrots.jpg",
@@ -66,8 +67,7 @@
         }
       ],
       "Contact": "0744332211",
-      "Address": "Kariokor Market, Nairobi",
-      "id": "2dfb"
+      "Address": "Kariokor Market, Nairobi"
     }
   ],
   "Buyers": [
@@ -97,78 +97,6 @@
       "Address": "Machakos",
       "Photo": "https://example.com/photos/kevin.jpg",
       "id": "c925"
-    },
-    {
-      "id": "776e",
-      "username": "o",
-      "password": ""
-    },
-    {
-      "id": "4152",
-      "username": "don",
-      "password": "12345678"
-    },
-    {
-      "id": "062e",
-      "username": "donald",
-      "password": "12345678"
-    },
-    {
-      "id": "c3e9",
-      "username": "donald",
-      "password": "2345678"
-    },
-    {
-      "id": "a656",
-      "username": "donald",
-      "password": "2345678"
-    },
-    {
-      "id": "72d8",
-      "username": "stephen",
-      "password": "njuhdken2"
-    },
-    {
-      "id": "8803",
-      "username": "stephen",
-      "password": "njuhdken2"
-    },
-    {
-      "id": "ab3c",
-      "username": "stephen",
-      "password": "njuhdken2"
-    },
-    {
-      "id": "1ab9",
-      "username": "kiarie",
-      "password": "don0345",
-      "contact": "0112345567",
-      "address": "Nairobi",
-      "photo": "https://images.unsplash.com/photo-1752436365654-de0ebc45784b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8"
-    },
-    {
-      "id": "e387",
-      "username": "kiarie",
-      "password": "don0345",
-      "contact": "0112345567",
-      "address": "Nairobi",
-      "photo": "https://images.unsplash.com/photo-1752436365654-de0ebc45784b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8"
-    },
-    {
-      "id": "c02d",
-      "username": "kiarie",
-      "password": "don0345",
-      "contact": "0112345567",
-      "address": "Nairobi",
-      "photo": "https://images.unsplash.com/photo-1752436365654-de0ebc45784b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8"
-    },
-    {
-      "id": "bbda",
-      "username": "kiarie",
-      "password": "don0345",
-      "contact": "",
-      "address": "",
-      "photo": ""
     }
   ]
 }
