@@ -17,19 +17,59 @@ function Products() {
 
   console.log(sellers)
 
+ const styles = {
+    container: {
+      padding: "20px",
+      fontFamily: "Arial, sans-serif",
+      backgroundColor: "#e6f0ff",
+      minHeight: "100vh",
+      color: "#003366",
+    },
+    header: {
+      textAlign: "center",
+      marginBottom: "30px",
+    },
+    profile: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      marginBottom: "20px",
+    },
+    profileImage: {
+      height: "200px",
+      width: "200px",
+      borderRadius: "50%",
+      border: "4px solid #007bff",
+      objectFit: "cover",
+      marginTop: "10px",
+    },
+    logoutButton: {
+      marginTop: "30px",
+      padding: "10px 20px",
+      backgroundColor: "#007bff",
+      color: "white",
+      border: "none",
+      borderRadius: "6px",
+      fontSize: "16px",
+      cursor: "pointer",
+    },
+  };
 
   return (
-  <div>
+  <div style={styles.container}>
     {!buyer ? (
       <Login setBuyer={setBuyer} />
     ) : ( 
      <>
-      <h2>Welcome {buyer.Username}</h2>
+      <h2 style={styles.header}>Welcome {buyer.Username} ("Buyer")</h2>
       <img src={buyer.Photo} style={{height: "200px", width: "200px", borderRadius:"50%"}}/>
+      <h1>Available Products</h1>
       {sellers.map((seller) => (
         <SellerItem key={seller.id} seller={seller} />
       ))}
-      <button onClick={() => setBuyer(null)}>Logout</button>
+      <div style={{ textAlign: "center"}}>
+      <button onClick={() => setBuyer(null)} style={{height: "50px", width: "300px", backgroundColor: "#fff"}}>Logout</button>
+      </div>
       </>
     )}
   
