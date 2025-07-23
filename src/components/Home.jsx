@@ -143,7 +143,130 @@ const styles = {
     WebkitTextFillColor: "transparent",
     animation: "bounce 2s infinite",
   },
+  footer: {
+    background: "linear-gradient(135deg, #1e293b 0%, #0f172a 100%)",
+    color: "#e2e8f0",
+    padding: "60px 30px 30px",
+    marginTop: "80px",
+    position: "relative",
+    overflow: "hidden",
+    borderTop: "1px solid rgba(0, 123, 255, 0.2)",
+  },
+
+  footerBackground: {
+    position: "absolute",
+    top: "-50%",
+    left: "-50%",
+    width: "200%",
+    height: "200%",
+    background: "radial-gradient(circle, rgba(0, 123, 255, 0.05) 0%, transparent 70%)",
+    animation: "float 25s ease-in-out infinite reverse",
+    zIndex: -1,
+  },
+
+  footerContainer: {
+    maxWidth: "1200px",
+    margin: "0 auto",
+    position: "relative",
+  },
+
+  footerGrid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+    gap: "40px",
+    marginBottom: "40px",
+  },
+
+  footerSection: {
+    textAlign: "left",
+  },
+
+  footerTitle: {
+    fontSize: "1.5rem",
+    fontWeight: "700",
+    marginBottom: "20px",
+    background: "linear-gradient(135deg, #007bff 0%, #0056b3 100%)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    backgroundClip: "text",
+    position: "relative",
+    display: "inline-block",
+  },
+
+  footerTitleIcon: {
+    display: "inline-block",
+    marginRight: "10px",
+    fontSize: "1.3rem",
+    animation: "bounce 2s infinite",
+  },
+
+  footerList: {
+    listStyle: "none",
+    padding: 0,
+    margin: 0,
+  },
+
+  footerListItem: {
+    marginBottom: "12px",
+    transition: "all 0.3s ease",
+  },
+
+  footerLink: {
+    color: "#cbd5e1",
+    textDecoration: "none",
+    fontSize: "1rem",
+    transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+    position: "relative",
+    display: "inline-block",
+    padding: "5px 0",
+  },
+
+  footerLinkHover: {
+    color: "#007bff",
+    transform: "translateX(5px)",
+    textShadow: "0 0 10px rgba(0, 123, 255, 0.5)",
+  },
+
+  footerDescription: {
+    color: "#94a3b8",
+    fontSize: "1rem",
+    lineHeight: "1.6",
+    marginBottom: "20px",
+  },
+
+  footerDivider: {
+    height: "1px",
+    background: "linear-gradient(90deg, transparent, rgba(0, 123, 255, 0.3), transparent)",
+    margin: "40px 0 30px",
+    position: "relative",
+  },
+
+  footerBottom: {
+    textAlign: "center",
+    paddingTop: "20px",
+    borderTop: "1px solid rgba(148, 163, 184, 0.1)",
+  },
+
+  footerBottomText: {
+    color: "#64748b",
+    fontSize: "0.9rem",
+    margin: "0",
+    position: "relative",
+  },
+
+  footerBottomGlow: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: "200px",
+    height: "2px",
+    background: "linear-gradient(90deg, transparent, #007bff, transparent)",
+    opacity: 0.3,
+    animation: "shimmer 3s linear infinite",
+  }
 };
+
 
 const Home = () => {
   const navigate = useNavigate();
@@ -166,7 +289,7 @@ const Home = () => {
       <div style={styles.infoSection}>
         <div style={styles.infoSectionGlow}></div>
         <h3 style={styles.infoSectionTitle}>
-          <span style={styles.infoSectionTitleIcon}>ℹ️</span>
+          <span style={styles.infoSectionTitleIcon}></span>
           About this App
         </h3>
         <p>
