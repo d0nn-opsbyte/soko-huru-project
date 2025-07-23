@@ -23,7 +23,7 @@ function Products() {
     ) : ( 
      <>
       <h2>Welcome {buyer.Username}</h2>
-      <img src={buyer.Photo}/>
+      <img src={buyer.Photo} style={{height: "200px", width: "200px", borderRadius:"50%"}}/>
       {sellers.map((seller) => (
         <SellerItem key={seller.id} seller={seller} />
       ))}
