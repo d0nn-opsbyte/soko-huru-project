@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SellerItem from "./SellerItem";
 import Login from "./Login";
+import { useNavigate } from "react-router-dom";
 
 function Products() {
   const [sellers, setSellers] = useState([]);

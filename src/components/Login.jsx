@@ -19,6 +19,7 @@ function Login ({ setBuyer }) {
         if (found) {
             setBuyer(found);
             alert("Login successful");
+            navigate("/products");
 
             setUsername("");
             setPassword("");

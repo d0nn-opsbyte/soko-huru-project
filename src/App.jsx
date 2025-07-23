@@ -10,9 +10,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/" element={<Login setBuyer={setBuyer}/>} />
+        <Route path="/signup" element={<SignUp  setBuyer={setBuyer}/>} />
+        <Route path="/products" element={<Products buyer={buyer}/>} />
       </Routes>
     </Router>
   )
