@@ -68,11 +68,7 @@ function Products() {
   return (
   <div style={styles.container}>
     {!buyer ? (
-<<<<<<< HEAD
-      <Login setBuyer={setBuyer} />
-=======
       <Login />
->>>>>>> c3b89c726e335532f917acdc614c89ec1d792f60
     ) : ( 
      <>
       <h2 style={styles.header}>Welcome {buyer.Username} ("Buyer")</h2>
