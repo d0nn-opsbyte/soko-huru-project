@@ -8,6 +8,16 @@ function Products() {
   const[buyer,setBuyer]=useState(null)
 
   useEffect(() => {
+  const savedBuyer = localStorage.getItem("buyer");
+  if (savedBuyer) {
+    const parsed = JSON.parse(savedBuyer);
+    setBuyer(parsed);
+  } else {
+    navigate("/login"); // redirect if not logged in
+  }
+}, []);
+
+  useEffect(() => {
     fetch("http://localhost:3000/Sellers")
       .then((res) => res.json())
       .then((data) => {
@@ -58,7 +68,7 @@ function Products() {
   return (
   <div style={styles.container}>
     {!buyer ? (
-      <Login setBuyer={setBuyer} />
+      <Login />
     ) : ( 
      <>
       <h2 style={styles.header}>Welcome {buyer.Username} ("Buyer")</h2>

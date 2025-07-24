@@ -42,17 +42,9 @@ function SellerNavbar({ setSeller }) {
 
   return (
     <nav style={navStyle}>
-      <NavLink
-        to="/"
-        style={({ isActive }) =>
-          isActive ? { ...linkStyle, ...activeStyle } : linkStyle
-        }
-      >
-        Products
-      </NavLink>
 
       <NavLink
-        to="/logout"
+        to="/"
         onClick={handleLogout}
         style={({ isActive }) =>
           isActive ? { ...linkStyle, ...activeStyle } : linkStyle

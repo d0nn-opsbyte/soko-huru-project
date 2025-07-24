@@ -1,8 +1,9 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom";
 
 function LoginForm({setSeller}){
     const baseURL = `http://localhost:3000/Sellers`;
-
+    const navigate= useNavigate();
     const [loginFormData, setLoginFormData] = useState({
         Sellername: "",
         Password: ""
@@ -68,13 +69,10 @@ function LoginForm({setSeller}){
                 setSeller(data[0]);
                 localStorage.setItem('seller', JSON.stringify(data[0]));
                 setError('');
-                setLoginFormData({
-                    Sellername: "",
-                    Password: ""
-                });
+                setLoginFormData({ Sellername: "", Password: "" });
             } else {
                 setError('Invalid seller name or password');
-                setSeller('');
+                setSeller(null);
                 localStorage.removeItem('seller');
                 alert("wrong password or username");
             }
@@ -130,6 +128,24 @@ function LoginForm({setSeller}){
 
     return(
         <div style={formStyle}>
+             <nav style={{
+             
+        }}>
+            <button 
+            onClick={() => navigate('/')}
+            style={{
+                padding: '8px 16px',
+                backgroundColor: '#007bff',
+                color: 'white',
+                border: 'none',
+                borderRadius: '4px',
+                cursor: 'pointer',
+                fontSize: '16px',
+            }}>
+                Home
+            </button>
+            
+        </nav>
             <h2 style={headingStyle}>Seller Login</h2>
             <form onSubmit={handleLogin}>
 

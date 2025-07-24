@@ -17,14 +17,15 @@ function Login ({ setBuyer }) {
         const found =buyers.find(
             b => b.Username === Username && b.Password === Password
         );
-        if (found) {
-            setBuyer(found);
-            alert("Login successful");
-            navigate("/products");
-
-            setUsername("");
-            setPassword("");
-        }else{
+       if (found) {
+    setBuyer(found);
+    localStorage.setItem("buyer", JSON.stringify(found)); // ← SAVE to localStorage
+    alert("Login successful");
+    navigate("/products");
+    setUsername("");
+    setPassword("");
+}
+        else{
             alert("invalid username or password")
         }   
      });
@@ -74,6 +75,24 @@ function Login ({ setBuyer }) {
  
    return(
    <div style={styles.container}>
+     <nav style={{
+             
+        }}>
+            <button 
+            onClick={() => navigate('/')}
+            style={{
+                padding: '8px 16px',
+                backgroundColor: '#007bff',
+                color: 'white',
+                border: 'none',
+                borderRadius: '4px',
+                cursor: 'pointer',
+                fontSize: '16px',
+            }}>
+                Home
+            </button>
+            
+        </nav>
     <form onSubmit={handleSubmit}>
         <h2>buyer Login</h2>
         <input placeholder="Username" 

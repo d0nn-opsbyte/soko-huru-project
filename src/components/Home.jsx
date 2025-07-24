@@ -278,10 +278,10 @@ const Home = () => {
         <div style={styles.titleUnderline}></div>
         <p>Choose your role to get started.</p>
         <div style={styles.buttonContainer}>
-          <button style={styles.button} onClick={() => navigate("/buyer")}>
+          <button style={styles.button} onClick={() => navigate("/buyerlogin")}>
             Buyer
           </button>
-          <button style={styles.button} onClick={() => navigate("/seller")}>
+          <button style={styles.button} onClick={() => navigate("/sellerlogin")}>
             Seller
           </button>
         </div>

@@ -2,8 +2,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
-import BuyerPage from "./components/BuyerPage";
-import SellerPage from "./components/SellerPage";
 import { useState } from 'react';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
@@ -19,12 +17,10 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/buyer" element={<BuyerPage />} />
-        <Route path="/seller" element={<SellerPage />} />
-        <Route path="/" element={<Login setBuyer={setBuyer}/>} />
+        <Route path="/buyerlogin" element={<Login setBuyer={setBuyer}/>} />
         <Route path="/signup" element={<SignUp  setBuyer={setBuyer}/>} />
         <Route path="/products" element={<Products buyer={buyer}/>} />
-        <Route path="/" element={<SellerProductPage/>}/>
+        <Route path="/sellerlogin" element={<SellerProductPage/>}/>
         <Route path="/logout" element={<LogOutPage />} />
       </Routes>  
     </Router>

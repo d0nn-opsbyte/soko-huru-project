@@ -1,3 +1,6 @@
+
+import React, {useState} from "react"
+
 function SellerItem({ product, sellerProducts, setSellerProducts, sellerId }) {
   const baseURL = 'http://localhost:3000/Sellers';
   const selectedId = product.productId;

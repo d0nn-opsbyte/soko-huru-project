@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import SellerNavbar from '../components/SellerNavbar';
 import SellerItem from '../components/SellerItem';
 import NewProductForm from '../components/NewProductForm';
@@ -7,28 +7,33 @@ import SellerProfile from '../components/SellerProfile';
 
 function SellerProductPage() {
   const [sellerProducts, setSellerProducts] = useState([]);
-  const [seller, setSeller] = useState('');
+  const [seller, setSeller] = useState(null);
   const baseURL = 'http://localhost:3000/Sellers';
-  const sellerId = seller.id;
 
-  useEffect(() => {
-    if (!sellerId) return;
-    fetch(`${baseURL}/${sellerId}`)
-      .then(response => response.json())
-      .then(data => {
-        setSellerProducts(data.Products || []);
-        console.log('seller Data', data);
-        console.log('Seller Products:', data.Products);
-      })
-      .catch(error => console.error('Error fetching seller products:', error));
-  }, [sellerId]);
-
+  // Load seller from localStorage
   useEffect(() => {
     const savedSeller = localStorage.getItem('seller');
     if (savedSeller) {
-      setSeller(JSON.parse(savedSeller));
+      const parsedSeller = JSON.parse(savedSeller);
+      setSeller(parsedSeller);
+      setSellerProducts(parsedSeller.Products || []);
+    } else {
+      console.log("No seller found in local storage");
     }
   }, []);
+
+  // Fetch products from API if seller exists
+  useEffect(() => {
+    if (!seller?.id) return;
+
+    fetch(`${baseURL}/${seller.id}`)
+      .then(response => response.json())
+      .then(data => {
+        setSellerProducts(data.Products || []);
+        console.log('Fetched seller data:', data);
+      })
+      .catch(error => console.error('Error fetching seller products:', error));
+  }, [seller?.id]);
 
   // STYLES
   const containerStyle = {
@@ -99,9 +104,10 @@ function SellerProductPage() {
     letterSpacing: "0.3px"
   };
 
+  // Render
   return (
     <>
-      {!seller ? (
+      {!seller?.id ? (
         <LoginForm setSeller={setSeller} />
       ) : (
         <>
@@ -110,15 +116,13 @@ function SellerProductPage() {
           </header>
           <hr />
           <div style={containerStyle}>
-            <h2 style={headingStyle}>
-              Welcome to {seller.Sellername} Product Page
-            </h2>
+            <h2 style={headingStyle}>Welcome to {seller.Sellername} Product Page</h2>
             <ul style={contactListStyle}>
               <li style={subheadingStyle}><strong>Contact Details</strong></li>
               <li><strong>Physical Address:</strong> {seller.Address}</li>
               <li><strong>Contact:</strong> {seller.Contact}</li>
             </ul>
-            <hr style={{width: "100%", maxWidth: "600px", borderColor: "#ccc", margin: "30px 0"}} />
+            <hr style={{ width: "100%", maxWidth: "600px", borderColor: "#ccc", margin: "30px 0" }} />
             <h2 style={headingStyle}>Products List</h2>
             <div style={productsWrapperStyle}>
               {sellerProducts.length > 0 ? (
@@ -127,7 +131,7 @@ function SellerProductPage() {
                     key={product.productId}
                     product={product}
                     sellerProducts={sellerProducts}
-                    sellerId={sellerId}
+                    sellerId={seller.id}
                     setSellerProducts={setSellerProducts}
                   />
                 ))
@@ -137,11 +141,11 @@ function SellerProductPage() {
             </div>
           </div>
           <NewProductForm
-            sellerId={sellerId}
+            sellerId={seller.id}
             sellerProducts={sellerProducts}
             setSellerProducts={setSellerProducts}
           />
-          <SellerProfile Id={sellerId} />
+          <SellerProfile Id={seller.id} />
         </>
       )}
     </>
