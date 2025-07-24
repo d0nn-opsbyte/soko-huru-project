@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import SellerItem from "./SellerItem";
+import SellerItem from "./SellerItems";
 import Login from "./Login";
 import { useNavigate } from "react-router-dom";
 
