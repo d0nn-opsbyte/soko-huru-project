@@ -1,12 +1,54 @@
-# React + Vite
+# Soko Huru
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- This is a simple web application that is designed to connect buyers to sellers of different products when one logs in. The app supports user authentication and also sign up for new users who want to use the service.
 
-Currently, two official plugins are available:
+### Buyers Side 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- One signs up if new or logs in if they already have an account
+- They will then be able to view the different item listings
+- Browse products by different sellers and details
+- Able to contact sellers of the product of interest
 
-## Expanding the ESLint configuration
+### Seller Side
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Log in and manage products that is by adding new products and editing existing products
+- Also remove out of stock products
+
+  ##Technologies Used
+  
+  - React
+  - CSS
+  - JSON Server
+ 
+    ## How to Setup
+
+    1. Clone this repository
+    2. Install the Dependencies
+    3. Start the Backend (JSON Server)
+    4. Start the React App
+   
+    ### Authors
+
+    1. Donald Kiarie
+    2. Rodney Karani
+    3. Dennis Karanja
+
+
+ ## Contributions
+
+ Contributions are welcome. Feel free to submit a pull request for improvement.
+
+## Contacts
+
++254 700 123456
+
+Email: info@sokohuru.com
+
+&copy; 2025
+
+
+
+   
+    
+      
+    

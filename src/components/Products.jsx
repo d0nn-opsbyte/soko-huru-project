@@ -8,7 +8,17 @@ function Products() {
   const[buyer,setBuyer]=useState(null)
 
   useEffect(() => {
-    fetch("https://soko-huru-json-server.onrender.com/Sellers")
+  const savedBuyer = localStorage.getItem("buyer");
+  if (savedBuyer) {
+    const parsed = JSON.parse(savedBuyer);
+    setBuyer(parsed);
+  } else {
+    navigate("/login"); // redirect if not logged in
+  }
+}, []);
+
+  useEffect(() => {
+    fetch('https://soko-huru-json-server.onrender.com/Sellers')
       .then((res) => res.json())
       .then((data) => {
         setSellers(data)
@@ -58,7 +68,11 @@ function Products() {
   return (
   <div style={styles.container}>
     {!buyer ? (
+<<<<<<< HEAD
       <Login setBuyer={setBuyer} />
+=======
+      <Login />
+>>>>>>> c3b89c726e335532f917acdc614c89ec1d792f60
     ) : ( 
      <>
       <h2 style={styles.header}>Welcome {buyer.Username} ("Buyer")</h2>
