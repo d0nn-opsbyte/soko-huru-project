@@ -71,9 +71,14 @@ function Products() {
       <Login />
     ) : ( 
      <>
-      <h2 style={styles.header}>Welcome {buyer.Username} ("Buyer")</h2>
-      <img src={buyer.Photo} style={{height: "200px", width: "200px", borderRadius:"50%"}}/>
-      <h1>Available Products</h1>
+      <div style={{textAlign:"center", border:"2px solid black", borderRadius:"20px", width:"fit-content"}}>
+      <h2 style={styles.header}>Welcome to {buyer.Username}'s Buyer Page</h2>
+      <h3>Your Profile:</h3>
+      <img src={buyer.Photo} style={{height: "200px", width: "200px", borderRadius:"50%", textAlign:"center"}}/>
+      <p>Your Contact: {buyer.Contact}</p>
+      <p>Your Address: {buyer.Address}</p>
+       </div>
+      <h1 style={{textAlign:"center"}}>Available Products</h1>
       {sellers.map((seller) => (
         <SellerProducts key={seller.id} seller={seller} />
       ))}

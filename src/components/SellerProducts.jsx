@@ -5,6 +5,7 @@ function SellerProducts({seller}){
 
 const styles = {
     sellerBox: {
+      textAlign: "center",
       backgroundColor: "#ffffff",
       border: "1px solid #99c2ff",
       borderRadius: "10px",
@@ -29,9 +30,9 @@ const styles = {
 
     return(
    <div style={styles.sellerBox}>
-    <h2 style={styles.sellerName}>seller Name: {seller.Sellername}</h2>
-    <p>contact: {seller.Contact}</p>
-    <p>{seller.Address}</p>
+    <h2 style={styles.sellerName}>Name of Seller: {seller.Sellername}</h2>
+    <p>Contact: <strong>{seller.Contact}</strong></p>
+    <p>Physical Address: <strong>{seller.Address}</strong></p>
     <div style={styles.productList}>{(seller.Products).map((product)=>(
         <ProductItem key={seller.productId} product={product} />
     ))}</div>
