@@ -32,5 +32,23 @@
     1. Donald Kiarie
     2. Rodney Karani
     3. Dennis Karanja
+
+
+ ## Contributions
+
+ Contributions are welcome. Feel free to submit a pull request for improvement.
+
+## Contacts
+
++254 700 123456
+
+Email: info@sokohuru.com
+
+&copy; 2025
+
+
+
+   
+    
       
     
