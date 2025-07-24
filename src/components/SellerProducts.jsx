@@ -1,6 +1,6 @@
 import ProductItem from "./ProductItem"
 
-function SellerItems({seller}){
+function SellerProducts({seller}){
   console.log(seller.Products)
 
 const styles = {
@@ -39,4 +39,4 @@ const styles = {
    </div>
     )
 }
-export default SellerItems
+export default SellerProducts
