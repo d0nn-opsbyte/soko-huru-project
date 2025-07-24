@@ -18,7 +18,7 @@ function Products() {
 }, []);
 
   useEffect(() => {
-    fetch("http://localhost:3000/Sellers")
+    fetch('https://soko-huru-json-server.onrender.com/Sellers')
       .then((res) => res.json())
       .then((data) => {
         setSellers(data)

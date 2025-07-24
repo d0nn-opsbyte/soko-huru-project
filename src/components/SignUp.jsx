@@ -15,7 +15,7 @@ function SignUp ({ onSignUp}) {
     const newBuyer = {Username, Password, Contact, Address, Photo};
 
 
-    fetch("http://localhost:3000/Buyers", {
+    fetch('https://soko-huru-json-server.onrender.com/Buyers', {
     method: "POST",
     headers: {"Content-Type": "application/json"},
     body: JSON.stringify(newBuyer),

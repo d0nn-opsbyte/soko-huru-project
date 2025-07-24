@@ -2,7 +2,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom";
 
 function LoginForm({setSeller}){
-    const baseURL = `http://localhost:3000/Sellers`;
+    const baseURL = `https://soko-huru-json-server.onrender.com/Sellers`;
     const navigate= useNavigate();
     const [loginFormData, setLoginFormData] = useState({
         Sellername: "",
@@ -63,7 +63,7 @@ function LoginForm({setSeller}){
     async function handleLogin(event){
         event.preventDefault();
         try {
-            const res = await fetch(`http://localhost:3000/Sellers?Sellername=${loginFormData.Sellername}&Password=${loginFormData.Password}`);
+            const res = await fetch(`https://soko-huru-json-server.onrender.com/Sellers?Sellername=${loginFormData.Sellername}&Password=${loginFormData.Password}`);
             const data = await res.json();
             if (data.length > 0){
                 setSeller(data[0]);

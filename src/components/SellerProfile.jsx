@@ -4,7 +4,7 @@ function SellerProfile({Id}) {
 
   const sellerId= Id
   const[seller,setSeller]=useState([])
-  const baseURL= "http://localhost:3000/Sellers"
+  const baseURL=  'https://soko-huru-json-server.onrender.com/Sellers';
   
   useEffect(()=>{
     fetch(`${baseURL}/${sellerId}`)

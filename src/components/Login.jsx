@@ -11,7 +11,7 @@ function Login ({ setBuyer }) {
   function handleSubmit(e) {
     e.preventDefault();
 
-     fetch("http://localhost:3000/Buyers")
+     fetch( 'https://soko-huru-json-server.onrender.com/Buyers')
      .then((res) => res.json())
      .then(buyers => {
         const found =buyers.find(

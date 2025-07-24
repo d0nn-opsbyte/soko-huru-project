@@ -8,7 +8,7 @@ import SellerProfile from '../components/SellerProfile';
 function SellerProductPage() {
   const [sellerProducts, setSellerProducts] = useState([]);
   const [seller, setSeller] = useState(null);
-  const baseURL = 'http://localhost:3000/Sellers';
+  const baseURL = 'https://soko-huru-json-server.onrender.com/Sellers';
 
   // Load seller from localStorage
   useEffect(() => {

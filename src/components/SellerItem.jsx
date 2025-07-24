@@ -2,7 +2,7 @@
 import React, {useState} from "react"
 
 function SellerItem({ product, sellerProducts, setSellerProducts, sellerId }) {
-  const baseURL = 'http://localhost:3000/Sellers';
+  const baseURL = 'https://soko-huru-json-server.onrender.com/Sellers';
   const selectedId = product.productId;
   const [clicked, setClicked] = useState(false);
   const [formData, setFormData] = useState({

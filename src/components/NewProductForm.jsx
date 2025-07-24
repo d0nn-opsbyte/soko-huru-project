@@ -8,7 +8,7 @@ function NewProductForm({sellerProducts, setSellerProducts, sellerId}) {
         image: '',
         description: ''
     });
-    const baseURL = 'http://localhost:3000/Sellers';
+    const baseURL = 'https://soko-huru-json-server.onrender.com/Sellers';
 
     function handleChange(event) {
         setFormData({
