@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import SellerItem from "./SellerProducts";
+import SellerProducts from "./SellerProducts";
 import Login from "./Login";
 import { useNavigate } from "react-router-dom";
 
@@ -65,7 +65,7 @@ function Products() {
       <img src={buyer.Photo} style={{height: "200px", width: "200px", borderRadius:"50%"}}/>
       <h1>Available Products</h1>
       {sellers.map((seller) => (
-        <SellerItem key={seller.id} seller={seller} />
+        <SellerProducts key={seller.id} seller={seller} />
       ))}
       <div style={{ textAlign: "center"}}>
       <button onClick={() => setBuyer(null)} style={{height: "50px", width: "300px", backgroundColor: "#fff"}}>Logout</button>
