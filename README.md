@@ -34,11 +34,20 @@ To use this application, you will need a computer, tablet or phone and access to
 ### View Live site
 You may access the live site of this application [here]()
 
+- Able to contact sellers of the product of interest
+
+### Seller Side
+
+- Log in and manage products that is by adding new products and editing existing products
+- Also remove out of stock products
+
+
 ## Technologies Used
   
   - React
   - CSS
   - JSON Server
+
   ## How to Setup
 
  1. Clone this repository
@@ -54,6 +63,7 @@ You may access the live site of this application [here]()
  4. Start the React App
       
         npm run dev
+
    
     ### Authors
 
