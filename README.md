@@ -5,6 +5,10 @@ Soko Huru is a simple web application that is designed to connect buyers to sell
 ### HomePage
 Access the seller or buyer login pages from the Homepage
 
+## View the site live
+
+visit the site at: [soko-huru](peaceful-churros-a037ef.netlify.app)
+
 ![Homepage](./src/assets/Homepage-sokohuru.png)
 
 ### Seller's Side
@@ -70,6 +74,12 @@ You may access the live site of this application [here]()
     1. Donald Kiarie
     2. Rodney Karani
     3. Dennis Karanja
+   
+## Related Repositories
+
+### Backend API
+
+Deployed API:[live API URL](https://soko-huru-json-server.onrender.com)
 
 
  ## Contributions
