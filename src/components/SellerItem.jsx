@@ -24,6 +24,7 @@ function SellerItem({ product, sellerProducts, setSellerProducts, sellerId }) {
   }
 
   function handleSubmit(event) {
+    event.preventDefault();
     const editedProduct = {
       productId: product.productId,
       name: formData.name || product.name,
@@ -39,11 +40,19 @@ function SellerItem({ product, sellerProducts, setSellerProducts, sellerId }) {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({ Products: updatedProducts })
-    }).then(() => setSellerProducts(updatedProducts))
+    }).then(() => { 
+       setSellerProducts(updatedProducts)
+      setFormData({
+         name: "",
+         price: "",
+         image: "",
+         description: ""
+      })})
       .catch((error) => console.error("Error editing product", error));
   }
 
   function handleDelete(event) {
+    event.preventDefault();
     const confirmMessage = confirm("Are you sure you want to delete this product?");
     if (!confirmMessage) return;
 

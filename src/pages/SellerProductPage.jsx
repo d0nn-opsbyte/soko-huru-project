@@ -131,7 +131,7 @@ function SellerProductPage() {
                     key={product.productId}
                     product={product}
                     sellerProducts={sellerProducts}
-                    sellerId={seller.id}
+                    sellerId={seller?.id}
                     setSellerProducts={setSellerProducts}
                   />
                 ))
@@ -141,7 +141,7 @@ function SellerProductPage() {
             </div>
           </div>
           <NewProductForm
-            sellerId={seller.id}
+            sellerId={seller?.id}
             sellerProducts={sellerProducts}
             setSellerProducts={setSellerProducts}
           />
