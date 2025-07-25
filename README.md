@@ -14,13 +14,13 @@
 - Log in and manage products that is by adding new products and editing existing products
 - Also remove out of stock products
 
-  ##Technologies Used
+## Technologies Used
   
   - React
   - CSS
   - JSON Server
  
-    ## How to Setup
+   ## How to Setup
 
     1. Clone this repository
     2. Install the Dependencies
