@@ -7,7 +7,7 @@ Access the seller or buyer login pages from the Homepage
 
 ## View the site live
 
-visit the site at: [soko-huru](peaceful-churros-a037ef.netlify.app)
+visit the site at: (peaceful-churros-a037ef.netlify.app)
 
 ![Homepage](./src/assets/Homepage-sokohuru.png)
 
