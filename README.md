@@ -35,15 +35,6 @@ visit the site at: [Soko-Huru](https://peaceful-churros-a037ef.netlify.app/)
 ## How to use
 ### Requirements
 To use this application, you will need a computer, tablet or phone and access to internet
-### View Live site
-You may access the live site of this application [here]()
-
-- Able to contact sellers of the product of interest
-
-### Seller Side
-
-- Log in and manage products that is by adding new products and editing existing products
-- Also remove out of stock products
 
 
 ## Technologies Used
